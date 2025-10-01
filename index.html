@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memnun Oldum Beyza</title>
+  <style>
+    html,body{
+      height:100%;margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+      background:linear-gradient(180deg,#061226,#081428);
+      color:#fff;display:flex;
+      align-items:center;justify-content:center
+    }
+    .card{
+      background:rgba(255,255,255,0.05);
+      padding:36px;border-radius:18px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.5);
+      text-align:center
+    }
+    h1{margin:0 0 20px;font-size:32px}
+    .name{color:#ffd6e0}
+    .btn{
+      padding:12px 20px;border-radius:10px;
+      border:0;cursor:pointer;font-weight:600;
+      background:linear-gradient(90deg,#ff7a7a,#ffb47a);
+      color:#082034;font-size:16px
+    }
+    .flower{
+      font-size:120px;
+      opacity:0;
+      transform:scale(0);
+      transition:all 1s ease;
+      margin-top:20px;
+    }
+    .flower.show{
+      opacity:1;
+      transform:scale(1);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Memnun oldum, <span class="name">Beyza</span> 🌸</h1>
+    <button class="btn" id="openSurprise">Sürprizi Aç</button>
+    <div class="flower" id="flower">🌸</div>
+  </div>
+
+  <script>
+    document.getElementById('openSurprise').addEventListener('click', ()=>{
+      document.getElementById('flower').classList.add('show');
+    });
+  </script>
+</body>
+</html>
